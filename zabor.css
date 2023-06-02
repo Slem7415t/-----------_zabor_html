@@ -1,0 +1,608 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+li, a, p {
+    font-family: Georgia, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: none;
+    color: #0b0b0b;
+    text-shadow: white 5px 5px 10px, white -5px -5px 10px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background: #4D7E3D;
+    
+}
+
+div.container {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    position: relative;
+    background: #4D7E3D;
+}
+
+.containers {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: 100vh;
+    margin: 0px;
+    position: absolute;
+    z-index:1;
+}
+
+.header {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-logo-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.box-slogan {
+    display: flex;
+    width: 40%;
+}
+
+.header-slogan {
+    display: flex;
+    width: 100%;
+    font-family: Georgia, sans-serif;
+    font-weight: 400;
+    padding: 5px;
+    font-size: 23px;
+    text-shadow: white 10px 10px 15px, white -10px -10px 15px;
+    white-space: nowrap;
+}
+
+.logo {
+    display: flex;
+    width: 100px;
+    height: 50px;
+    padding: 5px;
+    border-radius: 25px;
+}
+
+.company-chart {
+    display: flex;
+    width: 100%;
+    font-family: Georgia, sans-serif;
+    font-weight: 400;
+    padding: 5px;
+    font-size: 20px;
+    text-shadow: white 10px 10px 15px, white -10px -10px 15px;
+    white-space: nowrap;
+    justify-content: flex-end;
+}
+
+.header-form {
+    display: flex;
+}
+
+.header-text {
+    width: 60%;
+    display: flex;
+    padding: 5px;
+}
+
+.text-slogan {
+    font-size: 30px;
+}
+
+.header-button {
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;    
+}
+
+.header-button-text {
+    font-size: 20px;
+}
+
+.button {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+}
+
+.button__bg {
+    width: 180px;
+    height: 40px;
+    background: linear-gradient(87.23deg, rgba(128, 26, 179, 0) -91.42%, #FFCF63 99.79%);
+    border-radius: 4px;
+    border: 1px solid #0b0b0b;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #0b0b0b;
+}
+
+.button__bg:hover {
+    width: 180px;
+    height: 40px;
+    background: linear-gradient(87.23deg, rgba(128, 26, 179, 0) -91.42%, #f9af03 99.79%);
+    border-radius: 4px;
+    border: 1px solid #0b0b0b;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #0b0b0b;
+}
+
+.head-ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.head-li {
+    display: flex;
+    align-items: center;
+    
+}
+
+.head-li a{
+    display: flex;
+    padding: 0px 5px;
+    font-size: 25px;
+}
+
+.head-li a:hover {
+    color: var(--green);
+    font-size: 27px;
+}
+
+.separator {
+    display: flex;
+}
+
+.hr {
+    width: 90%;
+    height: 4px;
+    background: #0b0b0b;
+    margin: 5px 0px;
+}
+
+.bg {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 660px;
+    background: linear-gradient(180deg, rgba(140, 215, 238, 0) 0%, #4D7E3D 100%), url(assets/images/maxresdefault.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Адаптивное меню */
+
+:root{
+    --black: #0c0509;
+    --grey: #cbdfcf;
+    --grey2: #9fa392;
+    --yellow: #FFCF63;
+    --green: #4D7E3D;
+  
+  } /* Палитра */
+  
+  .nav-links a {
+    color: var(--black); /* Цвет текста */
+    font-size: 16px;
+  
+  } /*Задаем цвет ссылкам*/
+  
+  .menu {display: flex; /*Определяет как элемент должен быть показан в документе*/
+    font-size: 18px; /* Размер шрифта */
+    
+  } /*Навигационное меню*/
+  
+ /* .menu li {padding: 5px 10px; /*Внутренние отступы*/
+  
+ /* } /*Пункты меню*/
+  
+  .menu li a:hover {transition: all .3s; /*Плавность анимации*/
+    color: var(--green); /* Цвет текста */
+    font-size: 24px; /* Размер шрифта */
+  
+  } /*Ссылки меню при наведении*/
+  
+  #checkbox_toggle {display: none; /*Определяет как элемент должен быть показан в документе*/
+  
+  } /*Скрыли чек-бокс в навигационном меню при большом расширении*/
+  
+  .hamburger {
+    display: none; /*Определяет как элемент должен быть показан в документе*/
+    font-size: 24px; /*Размер шрифта*/
+    cursor: pointer; /*Вид курсора*/
+  
+  } /*Подпись к чек-боксу(Контейнер для внешнего вида кнопки мобильной навигации)*/
+  
+  .hamburger-line {background-color: var(--black); /*Цвет фона*/
+    display: block;/*Определяет как элемент должен быть показан в документе*/
+    height: 2px; /*Высота*/
+    position: relative; /*Позиционирование*/
+    width: 24px; /*Ширина*/
+  
+  } /* Из блока нарисованная средняя полоска кнопки мобильного меню*/
+  
+  .hamburger-line::before,
+  .hamburger-line::after {
+  background-color: var(--black); /*Цвет фона*/
+    content: ''; /*Содержание*/
+    display: block; /*Определяет как элемент должен быть показан в документе*/
+    position: absolute;/*Позиционирование*/
+    transition: all .3s; /*Плавность анимации*/
+    width: 100%; /*Ширина*/
+    height: 100%; /*Высота*/
+  
+  } /* Из блока нарисованные верхняя и нижняя полоски кнопки мобильного меню*/
+  
+  .hamburger-line::before {top: 7px; /*Отступ от средней полоски*/
+  
+  } /*Позиционируем верхнюю полоску*/
+  
+  .hamburger-line::after {top: -7px; /*Отступ от средней полоски*/
+  
+  } /*Позиционируем нижнюю полоску*/
+  
+  @media (max-width: 600px) {
+    .menu {
+      display: none; /*Определяет как элемент должен быть показан в документе*/
+      overflow: hidden; /*Обрезает не влазящий в блок текст*/
+      position: absolute; /*Позиционирование*/
+      background-color: var(--grey2); /*Цвет фона*/
+      text-align: center; /*Выравнивание текста по горизонтали*/
+      right: 20px; /*Отступ слева от экрана*/ 
+      top: 74px; /*Отступил от кнопки меню вниз*/
+      z-index: 2; /*Высота слоя*/
+      
+    } /*Мобильное меню*/
+  
+    .menu li a {
+      color: var(--black); /*Цвет фона*/
+      display: block; /*Определяет как элемент должен быть показан в документе*/
+      padding: 5px; /*Внутренние отступы*/
+      line-height: 10px; /* Между строчное растояние */
+  
+    } /*Ссылки в списке мобильного меню*/
+  
+    .menu li {
+      transition: all .5s; /*Плавность анимации*/
+  
+    } /*Ссылки мобильного меню*/
+  
+    .menu li:hover {
+      background-color: var(--grey); /*Цвет фона*/
+  
+    } /*Ссылки мобильного меню при нажатии*/
+  
+  
+    .hamburger {
+      display: block; /*Определяет как элемент должен быть показан в документе*/
+      padding: 20px 0; /*Внутренние отступы*/
+  
+    } /*Отобразили и добавили отступы кнопке меню чтобы легче было ее выделить*/
+  
+    #checkbox_toggle:checked ~ .menu {
+      display: block; /*Определяет как элемент должен быть показан в документе*/
+      transition: all .5s; /*Плавность анимации*/
+  
+    } /*Добавили отображение мобильного меню при нажатом чекбоксе*/
+  
+    #checkbox_toggle:checked ~ .hamburger .hamburger-line {
+      background-color: transparent; /*Цвет фона*/
+  
+    } /*Делаем прозрачной среднюю полоску меню*/
+  
+    #checkbox_toggle:checked ~ .hamburger .hamburger-line::before {
+      transform: rotate(-45deg); /*Поворачиваем*/
+      top: 0; /*Позиыия поворотной оси*/
+  
+    } /*Поворачиваем верхнюю полоску меню*/
+  
+    #checkbox_toggle:checked ~ .hamburger .hamburger-line::after {
+      transform: rotate(45deg); /*Поворачиваем*/
+      top: 0; /*Позиыия поворотной оси*/
+  
+    } /*Поворачиваем нижнюю полоску меню*/
+
+    .separator {
+        display: none;
+    }
+  
+  } /*Медиа эфекты навигации*/
+
+  /*мобила*/
+
+
+
+.header-mob {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-form-mob {
+    display: flex;
+    flex-direction: column;
+}
+
+.headers {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.header-logo-button-mob {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+}
+
+.header-button-mob {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;    
+}
+
+.box-slogan-mob {
+    display: flex;
+    width: 100%;
+}
+
+.header-slogan-mob {
+    width: 100%;
+    font-family: Georgia, sans-serif;
+    padding: 5px;
+    font-size: 20px;
+    text-shadow: white 10px 10px 15px, white -10px -10px 15px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.company-chart-mob {
+    width: 100%;
+    font-family: Georgia, sans-serif;
+    font-weight: 400;
+    padding: 5px;
+    font-size: 20px;
+    text-shadow: white 10px 10px 15px, white -10px -10px 15px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.button-mob {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+@media (min-width: 1000px) {
+    
+    .header-mob {
+        display: none; /*Определяет как элемент должен быть показан в документе*/
+    }
+
+    .header {
+          display: flex; /*Определяет как элемент должен быть показан в документе*/
+    }
+
+
+}
+
+@media (max-width: 1000px) {
+    
+    .header-mob {
+        display: flex; /*Определяет как элемент должен быть показан в документе*/
+    }
+
+    .header {
+        display: none; /*Определяет как элемент должен быть показан в документе*/
+    }
+
+}
+
+.containers { width: 90%; 
+
+} /*Поведение системы до 480px*/
+
+@media screen and (min-width: 480px) {
+  .containers { width: 90%; }
+  
+} /*Поведение системы от 480px до 600px*/
+
+@media screen and (min-width: 768px) {
+  .containers { width: 70%; }
+
+} /*Поведение системы от 600px*/
+
+div.container { width: 100%; 
+
+} /*Поведение системы*/
+
+
+@media (min-width: 480px) {
+    
+    .header-form-mob {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .text-slogan {
+        font-size: 20px;
+    }
+
+    .header-button-text {
+        font-size: 16px;
+    }
+
+}
+
+.popup-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 3;
+    display: none;
+} /* затемнение вокруг всплывающего окна */
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    background: white;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    padding-top: 60px;
+} /* всплывающее окно */
+
+.close-popup {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+} /* крестик */
+
+.popup form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} /*форма*/
+
+.popup form input {
+    width: 60%;
+    border: 2px solid #0b0b0b;
+    font-size: 20px;
+    margin-bottom: 30px;
+    height: 40px;
+} /*input формы*/
+
+.popup-form input[type='submit'] {
+    background: #0b0b0b;
+    color: #f9af03;
+}
+
+.no-scroll {
+    overflow-y: hidden;
+}
+
+
+/*подвал*/
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-botom {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-botom-left {
+    display: flex;
+}
+
+.signature {
+    width: 100px;
+    max-width: 100%;
+    height: 30px;
+    margin: 5px;
+}
+
+.footer-botom-right {
+    margin: 5px;
+    text-decoration: underline;
+}
+
+
+/* тело */
+
+/*main {
+    height: 100vh;
+}*/
+
+.employee_cards {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.employee_card {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.box_card {
+    display: flex;
+}
+
+.h2_card {
+    padding: 10px;
+}
+
+.icon_employee {
+    padding: 10px;
+}
+
+.icon_img {
+    width: 40px;
+    margin: 10px 5px;
+}
+
+.icon_img:hover {
+    width: 50px;
+    margin: 10px 5px;
+}
